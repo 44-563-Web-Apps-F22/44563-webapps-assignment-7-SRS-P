@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html> <head>
+	<title>cycle</title> 
+	<style>
+    .flex-container {
+      display: flex;  flex-direction:row;
+      background-color: rgb(255, 0, 144);
+  }
+
+.flex-container > div {  /*div children of the flex container*/
+  background-color: #f1f1f1; 
+  margin: 10px;  padding: 20px;  font-size: 30px;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) { 
+	 .flex-container{
+		 flex-direction:ROW;
+		 background-color: rgb(176, 209, 120);
+	  }
+	}
+</style>
+</head>
+
+<marquee behavior="left" direction="right"><h2>Siva Ram Sai Builds a cycler</h2></marquee>
+
+<body>
+	<p style="color:rgb(37, 203, 37);"><b> Enter the text</b></p>
+	<input type="text" id="text" style="border:3px solid rgb(26, 152, 186);margin-bottom:6px"></input>
+	<div class="flex-container" id="target"></div>
+
+		<br>
+		<button onclick="makeNewDiv()">Add value</button>
+		<button class="btn btn-primary" onclick="get()">Get</button>
+		<button class="btn btn-secondary" onclick ="spin()">Spin</button>
+		<script>
+				function makeNewDiv(){
+				/* make the div and its text */
+				let element = document.createElement("div")
+				element.innerHTML = document.getElementById("text").value
+				element.style.color = "orange"
+				element.className="cycler"
+		
+				/* add it to the container */
+				let container = document.getElementById('target')
+				container.appendChild(element)
+				}
+
+			function get(){
+		
+			 var cyclerItems =document.getElementsByClassName('cycler')
+			 let length = cyclerItems.length
+			 console.log(length)
+			 if(length>0)
+			 {
+				cyclerItems[cyclerItems.length-1].remove()
+			 }	
+			}
+			function spin()
+			{
+			 var cyclerItems =document.getElementsByClassName('cycler')
+			 if(cyclerItems.length!=0||cyclerItems.length!=1)
+			 {
+				var removedItem = cyclerItems[cyclerItems.length-1]
+				cyclerItems[cyclerItems.length-1].remove()
+				target.insertBefore(removedItem,target.firstChild)
+			 }
+				
+			}
+		</script>
+		
+</body>
+</html>	
