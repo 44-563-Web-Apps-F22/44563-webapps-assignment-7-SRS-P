@@ -22,6 +22,9 @@
             <div class="p-2 bg-dark flex-fill" id="score">Score is unknown.</div>
             <div class="p-2 bg-warning flex-fill" id="help">Help report</div>
         </div>
+        <div class = "container text-center">
+            <button class="btn btn-danger" type="submit" onclick="resetgame()">Reset Game</button>
+        </div>
         <div class="image-grid d-flex flex-column justify-content-center align-items-center">
 
             <div class="d-flex">
@@ -119,6 +122,24 @@
                 document.getElementById("help").innerHTML = "Sorry, no help available"
             }
         }
+        </script>
+         <script>
+            function resetgame() {
+        treasureLocation = Math.floor(Math.random() * 24)
+        while(treasureLocation == 12) {
+            treasureLocation = Math.floor(Math.random() * 24)
+        }
+        chestCount = 0
+        score = 0
+        document.getElementById("chests").innerHTML = "Number of chests checked is zero"
+        document.getElementById("score").innerHTML = "Score is unknown"
+        document.getElementById("help").innerHTML = "Help report"
+        for(let i = 0; i < 24; i++) {
+            if(i != 12) {
+                document.getElementById(ids[i]).src = "Treasure Chest.jpg"
+            }
+        }
+    }
         </script>
     </body>
 
