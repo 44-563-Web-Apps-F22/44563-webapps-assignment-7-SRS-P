@@ -1,8 +1,8 @@
 # WebApps-F22-Assignment-7
 An assignment on java script modifying the DOM and using anonymous callback functions.
 <br>
-Hosted at: [Treasure] https://github.com/44-563-Web-Apps-F22/44563-webapps-assignment-7-SRS-P/blob/main/treasure.html
+Hosted at: https://44-563-web-apps-f22.github.io/44563-webapps-assignment-7-SRS-P/treasure.html
 <br>
-Hosted at: [Reaction] https://github.com/44-563-Web-Apps-F22/44563-webapps-assignment-7-SRS-P/blob/main/reaction.html
+Hosted at: https://44-563-web-apps-f22.github.io/44563-webapps-assignment-7-SRS-P/reaction.html
 <br>
-Hosted at: [Cycler] https://github.com/44-563-Web-Apps-F22/44563-webapps-assignment-7-SRS-P/blob/main/cycler.html
+Hosted at: https://44-563-web-apps-f22.github.io/44563-webapps-assignment-7-SRS-P/cycler.html
